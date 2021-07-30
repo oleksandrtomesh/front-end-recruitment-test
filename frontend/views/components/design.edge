@@ -1,0 +1,138 @@
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class=" col-lg-8">
+                <form id="myForm" class="form-floating form needs-validation" novalidate>
+                    <div class="form__title">
+                        <h3>Personal Information</h3>
+                    </div>
+                    <!-- PERSONAL INFORMATION -->
+                    <div class="row">
+                        <div class="col-lg-6 mb-4">
+                            <div class="form-floating success">
+                                <input type="text" class="form-control shadow-sm" name="firstName" id="firstname" value="Elon" required>
+                                <label for="firstname">First name</label>
+                                <div class="invalid-feedback">
+                                    Please provide a First Name.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <div class="form-floating">
+                                <input type="text" class="form-control shadow-sm" name="lastName" id="lastname" value="Musk" required>
+                                <label for="lastname">Last Name</label>
+                                <div class="invalid-feedback">
+                                    Please provide a Last Name.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-4">
+                        <input type="email" class="form-control shadow-sm" name="email" id="email" value="Elon@spacex.com" required>
+                        <label for="email">Email</label>
+                        <div class="invalid-feedback">
+                            Please provide valid email.
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-floating">
+                                <select class="form-select mb-4 shadow-sm" name="country" id="country"
+                                    aria-label="Floating label select example">
+                                    <option value="United States">United States</option>
+                                    <option value="Poland">Poland</option>
+                                    <option value="Ukraine">Ukraine</option>
+                                </select>
+                                <label for="country">Counrty</label>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <div class="form-floating">
+                                <input type="text" pattern="[0-9]{5}" class="form-control shadow-sm" name="postalCode" id="postal-code" value="10001" required maxlength="5">
+                                <label for="postal-code">Postal Code</label>
+                                <div class="invalid-feedback">
+                                    Please provide valid Postal Code (format: 00000).
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-floating mb-4">
+                        <input type="tel"  class="form-control shadow-sm" name="phone" id="phoneNumber" pattern="(?:\(\d{3}\)|\d{3})[- ]?\d{3}[- ]?\d{2}[- ]?\d{2}" required value="(212)629-93-92">
+                        <label for="phoneNumber">Phone Number</label>
+                        <div class="invalid-feedback">
+                            Please provide valid phone number (format:(111)222-22-22 or 111-222-3333).
+                        </div>
+                    </div>
+                    <!-- PAYMENT DETAILS -->
+                    <div class="mb-4 form__title form__title--payments">
+                        <h3>
+                            Payment Details
+                            <i class="fas fa-unlock-alt"></i>
+                        </h3>
+                    </div>
+                    <div class="form-floating mb-4 form__card-details">
+                        <input class="form-control shadow-sm" name="creditCard" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" required id="cartNumber" type="text" inputmode="numeric" autocomplete="cc-number" maxlength="19" value="0000-0000-0000-0000">
+                        <label for="cartNumber">Credit Card Number</label>
+                        <i class="fab fa-cc-visa fa-cc-visa-color"></i>
+                        <div class="invalid-feedback">
+                            Please provide valid card number (format: 0000-0000-0000-0000).
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 mb-4 form__card-details">
+                            <div class="form-floating">
+                                <input type="password" class="form-control shadow-sm" name="CVV" id="securityCode" minlength="3" maxlength="3" value="111">
+                                <label for="securityCode">Security Code</label>
+                                <i class="far fa-question-circle security"></i>
+                                <div class="invalid-feedback">
+                                    Please provide valid security code.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <div class="form-floating">
+                                <input type="text" class="form-control shadow-sm" name="expDate" id="expirationDate" pattern="^(0[1-9]|1[0-2])\/?([0-9]{2})$" value="MM/YY">
+                                <label for="expirationDate">Expiration Date</label>
+                                <div class="invalid-feedback">
+                                    Please provide valid expiration date
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__response-message"></div>
+                    <div class="d-grid">
+                        <button class="btn btn-success btn-lg shadow-sm mb-4 form__submit-button" type="submit">
+                            <i class="fas fa-shopping-cart"></i>
+                            Complete purchase
+                        </button>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="col-lg-4">
+                <div class="card card--border">
+                    <div class="card-body conf">
+                        <h3>Your order</h3>
+                            <div>
+                                <span>Apple watch Sport </span><span class="float-end">$ 580</span> 
+                            </div>
+                            <div>
+                                <span>Modern Buckle</span><span class="float-end">$380</span> 
+                            </div>
+                            <div class="card--dashed-line"></div>
+                            <div>
+                                <span>Total purchases </span><span class="float-end">$ 960</span>
+                            </div>
+                            <div>
+                                <span>Estimated tax</span><span class="float-end">$ 0</span>
+                            </div>
+                            <div class="card--dashed-line"></div>
+                            <div >
+                                <span class="conf__total">Total</span><span class="float-end conf__total--price">$960</span>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

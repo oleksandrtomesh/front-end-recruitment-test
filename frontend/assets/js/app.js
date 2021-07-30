@@ -1,1 +1,6 @@
 import '../css/app.css'
+import './baconCloning'
+import './validation'
+import './submitForm'
+import '../scss/_app.scss'
+import '../scss/_fontawesome.scss'

@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,400&display=swap');
+
+//VARIABLES
+$form-floating-label-transform:   scale(.85) translateY(-.5rem) translateX(.15rem);
+$form-floating-label-opacity:     1;
+$body-bg: #F5F5F5;
+$input-color: 	#808080;
+$green: #32CD32;
+
+//IMPORT BOOTSTRAP 5 
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+section{
+    margin-top: 5rem;
+
+    //FORM
+    .form{
+        label{
+            font-weight: 700;
+        }
+
+        .form-floating.success{
+            i.fa-check-circle{
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: 1.5rem;
+            padding: 1.1rem;
+            color: green;
+        }
+    }
+        &__title{
+            position: absolute;
+            top: -2.5rem;
+            text-transform: uppercase;
+            @include media-breakpoint-down (lg){
+                margin-left: 2.5rem;
+            }
+            h3{
+                font-size: 1rem;
+                font-weight: 800;
+                
+            }
+            &::before{
+                content: '1';
+                position: absolute;
+                left: -1.5rem;
+                top: -.125rem;
+                font-weight: 700;
+                font-size: 1rem;
+                width: 1.6rem;
+                height: 1.6rem;
+                text-align: center;
+                border-radius: 50%;
+                transform: translateX(-50%);
+                color: #fff;
+                background-color: #000;
+
+                
+            }
+
+            &--payments{
+                position: relative;
+                top: 0;
+                margin-top: 3rem;
+                &::before{
+                    content: '2';
+                }
+
+                i{
+                    padding-left: 1rem;  
+                }
+            }
+        }
+
+
+        &__card-details{
+            i{
+                position: absolute;
+                right: 1rem;
+                top: 0;
+                font-size: 2rem;
+                padding: .8rem;
+                color: blue;
+            }
+
+            .security{
+                color: gray;
+                font-size: 1.5rem;
+                padding: 1rem;
+            }
+        }
+
+        &__submit-button{
+            text-transform: uppercase;
+            font-weight: 500;
+            height: 4rem;
+            font-size: 1rem;
+            color: white;
+            i{
+                margin-right: .3rem;
+            }
+        }
+
+        &__response-message{
+            display: block;
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .success-submit{
+            color: #32CD32;
+        }
+
+        .error-submit{
+            color: red;
+        }
+    }
+
+    .card{
+
+        div{
+            margin-bottom: 1rem;
+        }
+        &--border{
+            outline: 1px dashed #000;
+            outline-offset: -10px;
+        }
+
+        &--dashed-line{
+            border-bottom: 1px dashed #000;
+        }
+    
+    }
+    //CARD
+    .conf{
+        padding: 2rem;
+        h3{
+            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: 800;
+        }
+
+        &__total{
+            font-weight: 800;
+
+            &--price{
+                font-size: 2rem;
+                font-weight: 800;
+            }
+        }
+
+    }
+
+}
+
+
+
+
+
+
